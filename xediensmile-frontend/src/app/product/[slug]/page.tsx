@@ -1,11 +1,8 @@
 "use client";
 
-import { use, useState } from "react";
+import { use, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-// Product detail is fetched client-side so we can use params via `use()`
-// and show a rich interactive gallery without extra server wrappers.
 
 interface Product {
   _id: string;
@@ -24,13 +21,13 @@ function ProductDetailContent({ slug }: { slug: string }) {
   const [activeImg, setActiveImg] = useState(0);
   const [activeTab, setActiveTab] = useState<"desc" | "specs">("desc");
 
-  // Fetch once on mount via useEffect simulation using a ref trick
-  if (product === "loading") {
+  useEffect(() => {
+    setProduct("loading");
     fetch(`http://localhost:5001/api/products/slug/${slug}`)
       .then((r) => r.json())
       .then((d) => setProduct(d._id ? d : null))
       .catch(() => setProduct(null));
-  }
+  }, [slug]);
 
   if (product === "loading") {
     return (
