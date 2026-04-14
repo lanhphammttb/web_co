@@ -9,51 +9,67 @@ const NAV_ITEMS = [
     label: 'Xe Máy Điện',
     href: '/xe-may-dien',
     subs: [
-      { label: 'DK Bike', href: '/xe-may-dien/dk-bike' },
-      { label: 'Yadea', href: '/xe-may-dien/yadea' },
-      { label: 'Vinfast', href: '/xe-may-dien/vinfast' },
-      { label: 'Takashi', href: '/xe-may-dien/takashi' },
-      { label: 'JVCeco', href: '/xe-may-dien/jvceco' },
-      { label: 'DV Motor', href: '/xe-may-dien/dv-motor' },
-      { label: 'Vespas', href: '/xe-may-dien/vespas' },
-      { label: 'Dibao', href: '/xe-may-dien/dibao' },
-      { label: 'Pega', href: '/xe-may-dien/pega' },
-      { label: 'Atid', href: '/xe-may-dien/atid' },
-      { label: 'Ắc Quy', href: '/xe-may-dien/ac-quy' },
+      { label: 'Xe Điện Hottrend',       href: '/xe-dien-hot-trending' },
+      { label: 'DK Bike',                href: '/xe-may-dien-dkbike' },
+      { label: 'DV Motor',               href: '/xe-may-dien-dv-motor' },
+      { label: 'JVCeco',                 href: '/xe-may-dien-jvceco' },
+      { label: 'Yadea',                  href: '/xe-may-dien-yadea-1' },
+      { label: 'Vinfast',                href: '/xe-may-dien-vinfast-1' },
+      { label: 'Dibao',                  href: '/xe-may-dien-dibao-1' },
+      { label: 'Yaka Bike',              href: '/xe-may-dien-yaka-bike' },
+      { label: 'Dibao Gogo',             href: '/xe-may-dien-dibao-gogo' },
+      { label: 'NIJIA',                  href: '/xe-may-dien-nijia' },
+      { label: 'Kazuki',                 href: '/xe-dien-kazuki' },
+      { label: 'Xmen',                   href: '/xe-dien-xmen' },
+      { label: 'Vespa',                  href: '/xe-may-dien-vespa' },
+      { label: 'Osakar',                 href: '/xe-may-dien-osakar' },
+      { label: 'Detech',                 href: '/xe-may-dien-detech' },
     ],
   },
   {
     label: 'Xe Đạp Điện',
     href: '/xe-dap-dien',
     subs: [
-      { label: 'Yadea', href: '/xe-dap-dien/yadea' },
-      { label: 'DK Bike', href: '/xe-dap-dien/dk-bike' },
-      { label: 'JVC', href: '/xe-dap-dien/jvc' },
-      { label: 'Dinky Bike', href: '/xe-dap-dien/dinky-bike' },
-      { label: 'Bridgestone', href: '/xe-dap-dien/bridgestone' },
-      { label: 'Atid', href: '/xe-dap-dien/atid' },
-      { label: 'Xe Đạp Trợ Lực', href: '/xe-dap-dien/tro-luc' },
+      { label: 'DK Bike',        href: '/xe-dap-dien-dkbike' },
+      { label: 'DV Motor',       href: '/xe-dap-dien-dv-moto' },
+      { label: 'JVCeco',         href: '/xe-dap-dien-jvceco' },
+      { label: 'Dylexe',         href: '/xe-dap-dien-dylexe' },
+      { label: 'Avent',          href: '/xe-dap-dien-avent' },
+      { label: 'Osaka',          href: '/xe-dap-dien-osakar' },
+      { label: 'Yadea',          href: '/xe-dap-dien-yadea' },
+      { label: 'Mini',           href: '/xe-dap-dien-mini' },
+      { label: 'Xe Điện 3 Bánh', href: '/xe-dien-3-banh' },
+      { label: 'Detech',         href: '/xe-dap-dien-detech' },
     ],
   },
   {
     label: 'Xe 50CC',
-    href: '/xe-50cc',
+    href: '/xe-may-50cc',
     subs: [
-      { label: 'Xe Tay Ga', href: '/xe-50cc/xe-tay-ga' },
-      { label: 'Xe Số', href: '/xe-50cc/xe-so' },
+      { label: 'Xe Số 50CC', href: '/xe-so-50cc' },
+      { label: 'Xe Ga 50CC', href: '/xe-ga-50cc' },
     ],
   },
-  { label: 'Về Chúng Tôi', href: '/ve-xe-dien-smile' },
+  { label: 'Về Xe Điện Smile', href: '/ve-xe-dien-smile' },
   { label: 'CTKM Tháng', href: '/ctkm-thang', highlight: true },
-  { label: 'Blog', href: '/tin-tuc' },
+  {
+    label: 'Blog',
+    href: '/tin-tuc',
+    subs: [
+      { label: 'Tin tức xe điện',         href: '/tin-tuc' },
+      { label: 'Review xe điện',          href: '/review-xe-dien' },
+      { label: 'Chương trình khuyến mãi', href: '/ctkm-thang' },
+      { label: 'Video xe điện',           href: '/video' },
+    ],
+  },
   { label: 'Liên Hệ', href: '/lien-he' },
 ];
 
 const MOBILE_CATEGORIES = [
-  { label: 'Xe Máy Điện', href: '/xe-may-dien', icon: '🏍️', color: 'text-[#00579c]', bg: 'bg-blue-50 border-blue-100' },
-  { label: 'Xe Đạp Điện', href: '/xe-dap-dien', icon: '🚲', color: 'text-green-600', bg: 'bg-green-50 border-green-100' },
-  { label: 'Xe 50CC',     href: '/xe-50cc',     icon: '🛵', color: 'text-orange-500', bg: 'bg-orange-50 border-orange-100' },
-  { label: 'Khuyến Mãi', href: '/ctkm-thang',   icon: '🎁', color: 'text-red-500',   bg: 'bg-red-50 border-red-100' },
+  { label: 'Xe Máy Điện', href: '/xe-may-dien',  icon: '🏍️', color: 'text-[#00579c]', bg: 'bg-blue-50 border-blue-100' },
+  { label: 'Xe Đạp Điện', href: '/xe-dap-dien',  icon: '🚲', color: 'text-green-600',  bg: 'bg-green-50 border-green-100' },
+  { label: 'Xe 50CC',     href: '/xe-may-50cc',  icon: '🛵', color: 'text-orange-500', bg: 'bg-orange-50 border-orange-100' },
+  { label: 'Khuyến Mãi',  href: '/ctkm-thang',   icon: '🎁', color: 'text-red-500',    bg: 'bg-red-50 border-red-100' },
 ];
 
 export default function Header() {
@@ -174,9 +190,8 @@ export default function Header() {
                     </svg>
                   </Link>
 
-                  {/* Dropdown */}
                   {openDropdown === item.label && (
-                    <div className="absolute top-full left-0 bg-white shadow-xl border-t-2 border-[#00579c] min-w-[200px] z-50 animate-fade-down">
+                    <div className="absolute top-full left-0 bg-white shadow-xl border-t-2 border-[#00579c] min-w-[220px] z-50 animate-fade-down">
                       <div className="grid grid-cols-2 gap-0 py-2">
                         {item.subs.map((sub) => (
                           <Link
@@ -184,7 +199,7 @@ export default function Header() {
                             href={sub.href}
                             className="flex items-center gap-2 px-4 py-2.5 text-sm text-[#4c4c4c] hover:bg-[#00579c] hover:text-white transition"
                           >
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#00579c] flex-shrink-0 group-hover:bg-white"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#00579c] flex-shrink-0"></span>
                             {sub.label}
                           </Link>
                         ))}
@@ -256,7 +271,6 @@ export default function Header() {
           </div>
 
           <div className="flex-1 overflow-y-auto">
-            {/* Quick category circles */}
             <div className="flex overflow-x-auto gap-4 px-4 py-4 border-b border-gray-100 scrollbar-hide">
               {MOBILE_CATEGORIES.map((cat) => (
                 <Link
@@ -273,7 +287,6 @@ export default function Header() {
               ))}
             </div>
 
-            {/* Nav links */}
             <nav className="px-2 py-2">
               {NAV_ITEMS.map((item) => (
                 <div key={item.label}>
@@ -310,7 +323,6 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* Contact info */}
             <div className="mx-4 mb-24 p-4 bg-[#00579c]/5 rounded-xl border border-[#00579c]/10">
               <p className="text-sm font-bold text-[#00579c] mb-2">Hotline hỗ trợ</p>
               <a href="tel:0888882887" className="text-xl font-black text-[#e83e3e]">0888.882.887</a>
