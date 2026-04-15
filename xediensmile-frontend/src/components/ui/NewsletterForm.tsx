@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function NewsletterForm() {
+export default function NewsletterForm({ dark = false }: { dark?: boolean }) {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
 
@@ -22,7 +22,7 @@ export default function NewsletterForm() {
   ) : (
     <form
       onSubmit={handleSubmit}
-      className="flex border-2 border-primary rounded-lg overflow-hidden"
+      className={`flex border-2 rounded-lg overflow-hidden ${dark ? 'border-white/20' : 'border-primary'}`}
     >
       <input
         type="email"
@@ -30,7 +30,7 @@ export default function NewsletterForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Nhập email của bạn..."
-        className="flex-1 px-3 py-2 text-sm text-[#4c4c4c] focus:outline-none bg-white"
+        className={`flex-1 px-3 py-2 text-sm focus:outline-none ${dark ? 'bg-white/10 text-white placeholder:text-gray-400' : 'bg-white text-foreground'}`}
       />
       <button
         type="submit"

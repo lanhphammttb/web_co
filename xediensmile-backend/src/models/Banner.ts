@@ -18,4 +18,4 @@ const BannerSchema: Schema = new Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-export default mongoose.models.Banner || mongoose.model<IBanner>('Banner', BannerSchema);
+export default (mongoose.models.Banner || mongoose.model<IBanner>('Banner', BannerSchema)) as mongoose.Model<IBanner>;
